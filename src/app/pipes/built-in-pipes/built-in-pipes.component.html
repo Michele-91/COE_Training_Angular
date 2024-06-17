@@ -1,0 +1,38 @@
+<div class="pipe">
+    <h2 class="pipetitle">Date</h2>
+    <p>Today's date: {{ today | date }}</p>
+    <p>Short date: {{ today | date:'shortDate' }}</p>
+</div>
+<!-- <div class="pipe">
+    <h2 class="pipetitle">Uppercase and Lowercase</h2>
+    <p>Uppercase: {{ 'hello world' | uppercase }}</p>
+    <p>Lowercase: {{ 'HELLO WORLD' | lowercase }}</p>
+</div> -->
+<!-- <div class="pipe">
+    <h2 class="pipetitle">Currency</h2>
+    <p>Price: {{ 1234.56 | currency }}</p>
+</div> -->
+<!-- <div class="pipe">
+    <h2 class="pipetitle">Decimal</h2>
+    <p>Formatted Number: {{ 3.14159 | number:'1.2-2' }}</p>
+</div> -->
+<!-- <div class="pipe">
+    <h2 class="pipetitle">Percent</h2>
+    <p>Percentage: {{ 0.1234 | percent }}</p>
+</div> -->
+<!-- <div class="pipe">
+    <h2 class="pipetitle">JSON</h2>
+    <p>Object: {{ { name: 'Michele', age: 33 } | json }}</p>
+</div> -->
+<div class="pipe">
+    <h2 class="pipetitle">Slice</h2>
+    <p>Slice: {{ 'Angular' | slice:1:4 }}</p>
+</div>
+<div class="pipe">
+    <h2 class="pipetitle">Async</h2>
+    <p>Async: {{ promise | async }}</p>
+</div>
+<div class="pipe">
+    <h2 class="pipetitle">Custom</h2>
+    <p>Reversed: {{ 'Hello' | custom }}</p>
+</div>

@@ -1,0 +1,35 @@
+<h2>Reactive Form</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name">
+    <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+        <small *ngIf="myForm.get('name')?.errors?.['required']">Name is required.</small>
+        <small *ngIf="myForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+        <small *ngIf="myForm.get('name')?.errors?.['forbiddenName']">Name cannot be Bob.</small>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email">
+    <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+        <small *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="myForm.get('email')?.errors?.['email']">Email is invalid.</small>
+    </div>
+
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" required>
+    
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" required>
+    
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+  </form>
+  
+  <p *ngIf="myForm.value">
+    Name: {{ myForm.value.name }} <br>
+    Email: {{ myForm.value.email }}
+  </p> -->

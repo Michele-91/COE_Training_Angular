@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+
+<body>
+    <div class="container">
+        <p> {{ title }} </p>
+        <!-- <p>Insert title of the course: <input type="text" (input)="updateCourseTitle($event)"></p> -->
+        <p>Insert title of the course: <input type="text" [(ngModel)]="title"></p>
+        <button (click)="toggleChangeColorButton()">Disable the other button</button>
+        <button [disabled]="changeColorButtondisabled" (click)="changeColor($event)">Change background color</button>
+        <p [style]="titleBackgroundColor">Angular course</p>
+    </div>
+</body>
+
+</html>

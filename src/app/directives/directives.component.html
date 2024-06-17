@@ -1,0 +1,24 @@
+<div *ngIf="usersList && usersList.length>0">
+  <ul>
+    <li *ngFor="let user of usersList">{{ user.name + ' ' + user.surname }}</li>
+  </ul>
+</div>
+
+
+
+<!-- <div [ngSwitch]="value">
+  <div *ngSwitchCase="'case1'">Case 1</div>
+  <div *ngSwitchCase="'case2'">Case 2</div>
+  <div *ngSwitchDefault>Default Case</div>
+</div> -->
+
+
+<!-- <div [ngClass]="{'class1': usersList, 'class2': condition2}">Styled div</div>
+<div [ngStyle]="{'color': textColor, 'font-size': fontSize}">Styled div</div> -->
+
+
+<p appCustomAttribute>Hover over this text to see the highlight.</p>
+<button appHostListener>This uses a host listener.</button>
+<p appHostBinding>This is highlighted by host binding</p>
+<p appElementRef>This uses an ElementRef</p>
+<p appRendererTwo>This uses a Renderer2</p>
